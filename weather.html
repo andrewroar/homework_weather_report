@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Report</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="weather.css" />
+  </head>
+  <body>
+    <aside id="side-bar">
+      <header>Weather Report</header>
+      <div id="search-section">
+        <input id="weather-search-bar" />
+        <button id="search-bar-button">Search</button>
+        <button id="clear-button">Clear</button>
+        <ul id="recent-history"></ul>
+      </div>
+    </aside>
+    <main id="main-div">
+      <div id="report">
+        <div id="current-weather-container">
+          <h1></h1>
+          <ul>
+            <li id="current-weather-container-condition"></li>
+            <li id="current-weather-container-temp"></li>
+            <li id="current-weather-container-humidity"></li>
+            <li id="current-weather-container-wind"></li>
+            <li id="current-weather-container-uv"></li>
+          </ul>
+        </div>
+        <div id="future-weather-container" class="flex-container-1">
+          <h1></h1>
+          <div id="day1" class="flex-box-1">
+            <h3></h3>
+            <img />
+            <p id="day1-text"></p>
+          </div>
+          <div id="day2" class="flex-box-1">
+            <h3></h3>
+            <img />
+            <p id="day2-text"></p>
+          </div>
+          <div id="day3" class="flex-box-1">
+            <h3></h3>
+            <img />
+            <p id="day3-text"></p>
+          </div>
+          <div id="day4" class="flex-box-1">
+            <h3></h3>
+            <img />
+            <p id="day4-text"></p>
+          </div>
+          <div id="day5" class="flex-box-1">
+            <h3></h3>
+            <img />
+            <p id="day5-text"></p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="weather.js"></script>
+  </body>
+</html>

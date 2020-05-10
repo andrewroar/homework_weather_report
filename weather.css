@@ -1,0 +1,76 @@
+header {
+  font-size: 40px;
+  color: crimson;
+}
+
+body {
+  display: flex;
+}
+
+#main-div {
+  float: left;
+}
+
+/*===============*/
+
+#side-bar {
+  width: 20%;
+  float: left;
+  height: auto;
+  margin-right: auto;
+}
+
+/*===============*/
+
+#report {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 800px;
+  position: relative;
+  float: left;
+}
+
+#report h1 {
+  height: 50px;
+}
+
+/*For Weather container*/
+
+#current-weather-container {
+  position: relative;
+  float: left;
+}
+
+#current-weather-container ul {
+  list-style-type: none;
+  width: 250px;
+}
+
+.flex-container-1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-box-1 {
+  margin: 10px;
+  width: 250px;
+  word-wrap: break-word;
+  height: auto;
+}
+
+@media screen and (max-width: 800px) {
+  #current-weather-container {
+    display: flex;
+  }
+}
+
+/*For history bar*/
+
+.recentHistory {
+  list-style-type: none;
+}
+
+.recentHistory:hover {
+  color: blue;
+}
