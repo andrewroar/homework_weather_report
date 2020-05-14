@@ -22,6 +22,7 @@ $(document).ready(function () {
     city = localStorage.getItem("lastSearchedCity");
     renderWeather();
   }
+
   renderHistory();
 
   /////////////////////////////////
@@ -39,11 +40,11 @@ $(document).ready(function () {
     /////FUnction to render the current weather////
 
     function renderCurrentWeather(dataCurrentWeather) {
-      let weatherCityName = dataCurrentWeather.name;
-      let weatherCondition = dataCurrentWeather.weather[0].main;
-      let weatherTemp = dataCurrentWeather.main.temp;
-      let weatherHumidity = dataCurrentWeather.main.humidity;
-      let weatherWind = dataCurrentWeather.wind.speed;
+      const weatherCityName = dataCurrentWeather.name;
+      const weatherCondition = dataCurrentWeather.weather[0].main;
+      const weatherTemp = dataCurrentWeather.main.temp;
+      const weatherHumidity = dataCurrentWeather.main.humidity;
+      const weatherWind = dataCurrentWeather.wind.speed;
       weatherLat = dataCurrentWeather.coord.lat;
       weatherLon = dataCurrentWeather.coord.lon;
 
@@ -55,8 +56,13 @@ $(document).ready(function () {
         let localStorageMessage = $("#weather-search-bar").val().toUpperCase();
         let inputbarParentID = $("#weather-search-bar").val().toUpperCase();
         if (localStorage.getItem(localStorageMessage)) {
+          //pass
         } else {
           localStorage.setItem(inputbarParentID, localStorageMessage);
+
+          $("#recent-history").append(
+            $("<li>").text(localStorageMessage).addClass("recentHistory")
+          );
         }
       }
 
@@ -85,7 +91,7 @@ $(document).ready(function () {
 
       //////////////////////Because the UV is existing in another API, I need to call UV API//////////////////////
       //////////////////Now enjoy this spaghetti////////
-      var settings_1 = {
+      const settings_1 = {
         url:
           "http://api.openweathermap.org/data/2.5/uvi?appid=c1f7f71746ba6e7fda1ac3eca46c4500&lat=" +
           weatherLat +
